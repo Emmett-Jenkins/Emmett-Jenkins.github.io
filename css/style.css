@@ -1,0 +1,26 @@
+#content {
+    width: 80%;
+    margin: auto;
+}
+.blogpost {
+    margin: 0px 0px 20px 0px;
+    border-style: solid;
+    border-color: black;
+    border-width: 2;
+    padding: 5px;
+    overflow:auto
+}
+body {
+    margin: 0;
+}
+h1 {
+    margin: 0px 0px 20px 0px;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px 6px 9px 2px;
+    padding: 5px;
+}
+.blogpost img {
+    width: 20%;
+    float: left;
+}

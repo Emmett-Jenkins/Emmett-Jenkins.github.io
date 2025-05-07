@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Script Test</title>
+    <script src="js/formpixbrowser.js"></script>
+    <style>
+        img {
+            size: 300px;
+        }
+        img:hover {
+            size: 400px;
+        }
+    </style>
+</head>
+<body>
+    <img src="img/cookie.png" alt="cookie" id="cookie" onclick="increaseCookie()">
+    <div id="cookieCount"></div>
+</body>
+<script>
+    var cookies = 0;
+    var gain = 1;
+    function increaseCookie(){
+        cookies=cookies+gain;
+        document.getElementById("cookieCount").innerText="Cookies: " + cookies;
+    };
+    function increasePayload(a, d) {
+        if (cookies>=d) {
+            gain=gain+a;
+            cookies=cookies-d;
+            cookies=cookies-gain;
+            increaseCookie();
+        } else {
+            alert("Not Enough Cookies!");
+        };
+    }; 
+</script>
+<button onclick="increasePayload(1, 50)">50 Cookies: Additional Cookie Per Click</button><br>
+<button onclick="increasePayload(2, 75)">75 Cookies: 2 Additional Cookies Per Click</button><br>
+<button onclick="increasePayload(10, 450)">450 Cookies: 10 Additional Cookies Per Click</button>
+</html>
