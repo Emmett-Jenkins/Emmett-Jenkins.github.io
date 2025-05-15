@@ -3,21 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Script Test</title>
-    <script src="js/formpixbrowser.js"></script>
-    <style>
-        img {
-            size: 300px;
-        }
-        img:hover {
-            size: 400px;
-        }
-    </style>
-</head>
-<body>
+    <title>Bad cookie clicker</title>
+    <link rel="stylesheet" href="css2/cookie.css">
+<body style="background-color: #939F5C;">
+    <div class="links">
+        <a href = "index.html">Home</a> |
+        <a href = "about.html">About Me</a> |
+        <a style="color:gold" href = "scripttest.html">Bad Cookie Clicker</a> |
+        <a href = "game/get2school6/index.html">My Game</a> <br>
+    </div>
     <img src="img/cookie.png" alt="cookie" id="cookie" onclick="increaseCookie()">
     <div id="cookieCount"></div>
-</body>
 <script>
     var cookies = 0;
     var gain = 1;
@@ -35,8 +31,22 @@
             alert("Not Enough Cookies!");
         };
     }; 
+    function win(X) {
+        if (cookies>=X) {
+            alert("You Win!!!");
+        } else {
+            alert("Not Enough Cookies!");
+        };
+    }
 </script>
 <button onclick="increasePayload(1, 50)">50 Cookies: Additional Cookie Per Click</button><br>
 <button onclick="increasePayload(2, 75)">75 Cookies: 2 Additional Cookies Per Click</button><br>
-<button onclick="increasePayload(10, 450)">450 Cookies: 10 Additional Cookies Per Click</button>
+<button onclick="increasePayload(10, 450)">450 Cookies: 10 Additional Cookies Per Click</button><br>
+<button onclick="increasePayload(50, 2250)">2250 Cookies: 50 Additional Cookies Per Click</button><br>
+<button onclick="increasePayload(100, 4500)">4500 Cookies: 100 Additional Cookies Per Click</button><br>
+<button onclick="increasePayload(500, 22500)">22500 Cookies: 500 Additional Cookies Per Click</button><br>
+<button onclick="increasePayload(1000, 45000)">45000 Cookies: 1000 Additional Cookies Per Click</button><br>
+<button onclick="win(1000000)">1,000,000 Cookies: Win</button>
+</body>
+
 </html>

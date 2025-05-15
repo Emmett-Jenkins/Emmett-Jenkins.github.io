@@ -1,0 +1,19 @@
+body {
+    margin: auto;
+    width: 80%;
+    background-color: #645986;
+}
+#content {
+    background-color: #9FC2CC;
+}
+p {
+    color: #9E768F;
+}
+#welcome {
+    color: #EDEAD0;
+    background-color: #56A3A6;
+    width: 40%;
+    border: 5px solid #34312D;   
+    margin: auto;
+    text-align: center;
+}
